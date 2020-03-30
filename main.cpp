@@ -59,11 +59,11 @@ int main()
     dart.url = "https://dart.dev/";
     languages->set_at(10, dart);
 
-
-    int i;
-    for(i = 1; i <= 10; i++){
-      cout<<i<<". "<<languages->get(i).text<<" ["<<languages->get(i).url<<"]\n";
-    }
+    cout<<"Display Top Ten List from 1 to 10:\n";
+    languages->display_forward();
+    cout<<"\n";
+    cout<<"Display Top Ten List from 10 to 1:\n";
+    languages->display_backward();
 
     return 0;
 }
