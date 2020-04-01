@@ -15,21 +15,25 @@ TopTenList::TopTenList()
   _list.resize(10);
 }
 
-//display top ten list text from 1 to 10
+//display top ten list text forward (for top 10 list: 1 to 10)
 void TopTenList::display_forward()
 {
   int i;
-  for(i = 1; i <= 10; i++){
-    cout<<i<<". "<<get(i).text<<" ["<<get(i).url<<"]\n";
+  int list_size = _list.size();
+  cout<<"Programming Languages Top Ten List\n";
+  for(i = 1; i <= list_size; i++){
+    cout<<i<<". "<<get(i).text<<" ("<<get(i).url<<")\n";
   }
 }
 
-//display top ten list from 10 to 1
+//display top ten list backward (for top 10 list: 10 to 1)
 void TopTenList::display_backward()
 {
   int i;
-  for(i = 10; i >= 1; i--){
-    cout<<i<<". "<<get(i).text<<" ["<<get(i).url<<"]\n";
+  int list_size = _list.size();
+  cout<<"Programming Languages Top Ten List\n";
+  for(i = list_size; i >= 1; i--){
+    cout<<i<<". "<<get(i).text<<" ("<<get(i).url<<")\n";
   }
 }
 
